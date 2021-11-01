@@ -15,6 +15,36 @@ export type Module = {
   description: string
 }
 
+export type Author = {
+  photo: {
+    url: string
+    alternativeText: string
+  }
+  name: string
+  role: string
+  socialLinks: SocialLink[]
+  description: string
+}
+
+export type SocialLink = {
+  url: string
+  title: string
+}
+
+export type Review = {
+  id: number
+  photo: {
+    url: string
+  }
+  name: string
+  text: string
+}
+
+export type Question = {
+  question: string
+  answer: string
+}
+
 export type LogoProps = {
   alternativeText: string
   url: string
@@ -33,7 +63,7 @@ export type HeaderProps = {
   }
 }
 
-export type sectionAboutProjectProps = {
+export type SectionAboutProjectProps = {
   image: {
     alternativeText: string
     url: string
@@ -42,26 +72,62 @@ export type sectionAboutProjectProps = {
   description: string
 }
 
-export type sectionTechProps = {
+export type SectionTechProps = {
   title: string
   techIcons: TechIcon[]
 }
 
-export type sectionConceptsProps = {
+export type SectionConceptsProps = {
   title: string
   concepts: Concept[]
 }
 
-export type sectionModulesProps = {
+export type SectionModulesProps = {
   title: string
   modules: Module[]
+}
+
+export type SectionAgendaProps = {
+  title: string
+  description: string
+}
+
+export type PricingBoxProps = {
+  totalPrice: number
+  numberInstallments: number
+  priceInstallment: number
+  benefits: string
+  button: {
+    label: string
+    url: string
+  }
+}
+
+export type SectionAboutUsProps = {
+  title: string
+  authors: Author[]
+}
+
+export type SectionReviewsProps = {
+  title: string
+  reviews: Review[]
+}
+
+export type SectionFaqProps = {
+  title: string
+  questions: Question[]
 }
 
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
-  sectionAboutProject: sectionAboutProjectProps
-  sectionTech: sectionTechProps
-  sectionConcepts: sectionConceptsProps
-  sectionModules: sectionModulesProps
+  sectionAboutProject: SectionAboutProjectProps
+  sectionTech: SectionTechProps
+  sectionConcepts: SectionConceptsProps
+  sectionModules: SectionModulesProps
+  sectionAgenda: SectionAgendaProps
+  pricingBox: PricingBoxProps
+  sectionAboutUs: SectionAboutUsProps
+  sectionReviews: SectionReviewsProps
+  sectionFaq: SectionFaqProps
 }

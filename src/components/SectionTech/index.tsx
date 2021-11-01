@@ -4,10 +4,10 @@ import Heading from 'components/Heading'
 import Container from 'components/Container'
 
 import * as S from './styles'
-import { sectionTechProps } from 'types/api'
+import { SectionTechProps } from 'types/api'
 import { getImageUrl } from 'utils/getImageUrl'
 
-const SectionTech = ({ title, techIcons }: sectionTechProps) => (
+const SectionTech = ({ title, techIcons }: SectionTechProps) => (
   <S.Wrapper>
     <Container>
       <Heading reverseColor>{title}</Heading>
