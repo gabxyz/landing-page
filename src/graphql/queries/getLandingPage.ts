@@ -123,6 +123,15 @@ const GET_LANDING_PAGE = /* GraphQL */ `
         question
         answer
       }
+      extraQuestionBool
+      extraQuestion
+      extraAnswer
+    }
+  }
+
+  fragment footer on LandingPage {
+    footer {
+      footerInfo
     }
   }
 
@@ -139,6 +148,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionAboutUs
       ...sectionReviews
       ...sectionFaq
+      ...footer
     }
   }
 `
