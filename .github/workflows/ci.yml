@@ -14,9 +14,6 @@ jobs:
 
       - name: Install Packages
         run: yarn
-        
-      - name: Ignore engines
-        run: yarn install --ignore-engines
 
       - name: Check Lint
         run: yarn lint
